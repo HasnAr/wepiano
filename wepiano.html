@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>wepiano</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+</head>
+<body>
+	<div class="container clearfix">
+		<div id="logo" class="grid_1">
+			
+				<a href="logo.svg" >
+					<!--[if lte IE 8 ]-->
+					<img src="css/img/logo2.png" alt="wepiano" class="grid_1">
+					<!--![endif]-->
+				</a>
+		</div>
+
+		<div class="grid_3">
+			<h1 class="hero">Enjoy Playing Piano on Web, on Wepiano</h1>
+		</div>
+
+		<div  class="grid_2 omega">
+
+			<span class="tab_q"><h1 class="black">Q</h1></span>
+			<span class="tab_w"><h1 class="white">W</h1></span>
+			<span class="tab_e"><h1 class="black">E</h1></span>
+			<span class="tab_r"><h1 class="white">R</h1></span>
+			<span class="tab_v"><h1 class="black">V</h1></span>
+			<span class="tab_n"><h1 class="black">N</h1></span>
+			<span class="tab_u"><h1 class="white">U</h1></span>
+			<span class="tab_i"><h1 class="black">I</h1></span>
+			<span class="tab_o"><h1 class="white">O</h1></span>
+			<span class="tab_p"><h1 class="black">P</h1></span>
+		</div>
+	</div>	
+
+					<div class="grid_4 container"> <h3> developved by </h3></div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<script src="sound/soundmanager2.js"></script>
+	
+	<script>
+
+	soundManager.setup({
+	url: 'sound/swf/',
+	preferFlash: false,
+	onready: function() {},
+	 defaultOptions: {
+    // set global default volume for all sound objects
+    
+  }
+
+
+});
+
+
+	$(document).on('keypress', function(e) {
+    	var tag = e.target.tagName.toLowerCase();
+    	if ( e.which === 113 ) 
+    		{	
+    			$( ".tab_q" ).fadeTo(0, 0.5, function() { $(".tab_q").fadeTo(700, 1)});
+    			 soundManager.createSound({
+		        	url: 'sound/chord-01.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 25
+      				
+    			}).play();
+    		}	
+    		
+    		else if(e.which == 119){
+        		$( ".tab_w" ).fadeTo(0, 0.5, function() { $('.tab_w').fadeTo(700, 1)});
+        		soundManager.createSound({
+		        	url: 'sound/d1.mp3',
+		     		autoLoad: true,
+      				autoPlay: false,
+      				volume: 100
+      				
+    			}).play();
+
+        	}
+
+        else if(e.which == 101){
+        	$( ".tab_e" ).fadeTo(0, 0.5, function() { $('.tab_e').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/d2.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 10
+      				
+    			}).play();
+
+        }
+        else if(e.which == 114){
+        	$( ".tab_r" ).fadeTo(0, 0.5, function() { $('.tab_r').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/g3.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 10
+      				
+    			}).play();
+
+        }
+        else if(e.which == 118){
+        	$( ".tab_v" ).fadeTo(0, 0.5, function() { $('.tab_v').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/d4.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 10
+      				
+    			}).play();
+
+        }
+        else if(e.which == 110){
+        	$( ".tab_n" ).fadeTo(0, 0.5, function() { $('.tab_n').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/b4.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 10
+      				
+    			}).play();
+
+        }
+        else if(e.which == 117){
+        	$( ".tab_u" ).fadeTo(0, 0.5, function() { $('.tab_u').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/e5.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 10
+      				
+    			}).play();
+
+        }
+        else if(e.which == 105){
+        	$( ".tab_i" ).fadeTo(0, 0.5, function() { $('.tab_i').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/chord-02.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 35
+      				
+    			}).play();
+
+        }
+        else if(e.which == 111){
+        	$( ".tab_o" ).fadeTo(0, 0.5, function() { $('.tab_o').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/chord-03.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 35
+      				
+    			}).play();
+        }
+        else if(e.which == 112){
+        	$( ".tab_p" ).fadeTo(0, 0.5, function() { $('.tab_p').fadeTo(700, 1)});
+        	soundManager.createSound({
+		        	url: 'sound/g7.mp3',
+		     		autoLoad: true,
+		     		autoPlay: false,
+		     		volume: 35
+      				
+    			}).play();
+
+        }
+        	
+
+
+		});
+	
+	</script>
+		
+		</body>
+</html>
